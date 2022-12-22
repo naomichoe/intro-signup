@@ -1,0 +1,128 @@
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --white: hsl(0, 0%, 100%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.main-container {
+    width: 900px;
+    height: 500px; /*change*/
+    margin: 100px auto 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+}
+
+ /* LEFT CONTAINER START */
+.left-container {
+    grid-column: 1 / 2;
+}
+
+.left-container h1 {
+    font-size: 2.5rem;
+}
+
+.left-container p {
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 1.2rem;
+}
+/* LEFT CONTAINER END */
+
+/* RIGHT CONTAINER START */
+.right-container {
+    grid-column: 2 / -1;
+}
+
+.trial {
+    background-color: var(--blue);
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 6px 1px 0px rgba(0,0,0,0.21);
+}
+
+.form-container {
+    background-color: var(--white);
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 1px 0px rgba(0,0,0,0.19);
+}
+
+form {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.form-container p {
+    color: var(--grayish-blue);
+    font-size: 0.5rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-container a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.submit-btn {
+    background-color: var(--green);
+    color: var(--white);
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px -3px 6px 0px rgba(0,0,0,0.19) inset;
+}
+
+input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 2px;
+    outline: .07rem solid var(--grayish-blue);
+    font-weight: 600;
+}
+
+input:focus {
+    border: none;
+    outline: .07rem solid var(--dark-blue);
+}
+
+/* input:invalid:focus {
+    border: none;
+    outline: .02rem solid var(--red);
+} */
+
+/* RIGHT CONTAINER END */
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
